@@ -4,7 +4,7 @@ import "./UserDetails.css";
 
 const UserDetails = ({ userImage, displayName }) => (
   <div className="user-details-container">
-    <img alt="user" className="user-image" src={userImage} />
+    {/*<img alt="user" className="user-image" src={userImage} />*/}
     <p className="user-name">{displayName}</p>
   </div>
 );

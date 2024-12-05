@@ -4,17 +4,20 @@ import SongList from "../SongList";
 import AlbumList from "../AlbumList";
 import ArtistList from "../ArtistList";
 import BrowseView from "../BrowseView";
+import TopSong from '../TopSong/TopSong.';
 import "./MainView.css";
 
 const MainView = ({ headerTitle, audioControl, resumeSong, pauseSong }) => {
   return (
     <React.Fragment>
+
       {headerTitle === "Albums" ? (
         <AlbumList audioControl={audioControl} />
       ) : headerTitle === "Artists" ? (
         <ArtistList />
       ) : headerTitle === "Browse" ? (
         <BrowseView />
+
       ) : (
         //anything else show SongList
         <SongList
@@ -22,6 +25,8 @@ const MainView = ({ headerTitle, audioControl, resumeSong, pauseSong }) => {
           pauseSong={pauseSong}
           audioControl={audioControl}
         />
+
+
       )}
     </React.Fragment>
   );
